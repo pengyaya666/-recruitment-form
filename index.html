@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机学院辩论队招新报名</title>
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.15.0/dist/av-min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 新增：轮播图容器 -->
+        <div class="carousel">
+            <!-- 轮播图片列表 -->
+            <div class="carousel-images">
+                <img src="img\BHGHBHAHGHAAI-dQIYt1QuPI.png" alt="辩论队活动1" class="carousel-img active">
+                <img src="img\BHGHBHAIBECHD-TL4nQ0bms3.png" alt="辩论队活动2" class="carousel-img">
+                <img src="img\BHGHBHAIDABDA-E3JvDADWkq.png" alt="辩论队活动3" class="carousel-img">
+            </div>
+            <!-- 轮播指示器（小圆点） -->
+            <div class="carousel-indicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+            <!-- 左右切换按钮（可选，支持手动切换） -->
+            <button class="carousel-btn prev-btn">&lt;</button>
+            <button class="carousel-btn next-btn">&gt;</button>
+        </div>
+
+        <h1>辩论队招新报名</h1>
+        <form id="recruitmentForm">
+            <div class="form-item">
+                <label for="name">姓名 *</label>
+                <input type="text" id="name" name="name" placeholder="请输入你的姓名">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-item">
+                <label for="grade">年级 *</label>
+                <select id="grade" name="grade">
+                    <option value="">请选择你的年级</option>
+                    <option value="2021级">2021级</option>
+                    <option value="2022级">2022级</option>
+                    <option value="2023级">2023级</option>
+                    <option value="2024级">2024级</option>
+                </select>
+                <span class="error" id="gradeError"></span>
+            </div>
+
+            <div class="form-item">
+                <label for="phone">手机号 *</label>
+                <input type="tel" id="phone" name="phone" placeholder="请输入11位手机号">
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <div class="form-item">
+                <label for="experience">辩论经历（选填）</label>
+                <textarea id="experience" name="experience" rows="4" placeholder="请简述你的辩论经历，无则填“无”" maxlength="200"></textarea>
+            </div>
+
+            <button type="button" id="submitBtn">提交报名</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
